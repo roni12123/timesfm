@@ -19,11 +19,13 @@ from .configs import ForecastConfig
 try:
   from .timesfm_2p5 import timesfm_2p5_torch
   TimesFM_2p5_200M_torch = timesfm_2p5_torch.TimesFM_2p5_200M_torch
-except ImportError:
+except Exception as e:
+  print(e)
   pass
 
 try:
   from .timesfm_2p5 import timesfm_2p5_flax
   TimesFM_2p5_200M_flax = timesfm_2p5_flax.TimesFM_2p5_200M_flax
-except ImportError:
+except Exception as e:
+  print(e)
   pass
